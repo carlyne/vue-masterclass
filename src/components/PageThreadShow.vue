@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div v-for="thread in threads" :key="thread['.key']" class="col-large push-top">
+    <div class="col-large push-top">
       <h1>{{ thread.title }}</h1>
 
       <div class="post-list">
@@ -29,20 +28,27 @@
         </div>
       </div>
     </div>
-  </div>
 </template>
 
 <script>
 import srcData from "../data.json";
 
 export default {
-  name: "HelloWorld",
+  name: "PageThreadShow",
+
+  props: {
+      id: {
+          retquired: true,
+          type: String
+      }
+  },
+
   data() {
     return {
-      threads: srcData.threads,
+      thread: srcData.threads[this.id],
       posts: srcData.posts,
-      users: srcData.users,
+      users: srcData.users
     };
-  },
+  }
 };
 </script>
