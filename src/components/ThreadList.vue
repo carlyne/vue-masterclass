@@ -1,6 +1,7 @@
 <template>
     <div class="thread-list">
         <h2 class="list-title">Threads</h2>
+        
         <ThreadListItem 
             v-for="thread in threads"
             :key="thread['.key']"
@@ -10,7 +11,7 @@
 </template>
 
 <script>
-import srcData from "../data.json";
+import srcData from "@/data.json";
 import ThreadListItem from './ThreadListItem';
 
 export default {
