@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import srcData from "../data.json";
-import ThreadList from "./ThreadList";
+import srcData from "@/data.json";
+import ThreadList from "@/components/ThreadList";
 
 export default {
   name: "PageHome",
