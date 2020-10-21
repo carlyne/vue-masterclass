@@ -20,20 +20,20 @@
             </div>
         </div>
 
-        <div class="post-date text-faded"
-            :title="post.publishedAt | humanFriendlyDate">
+        <div class="post-date text-faded">
+            <BaseDate :timestamp="post.publishedAt" />
             <!-- {{ humanFriendlyDate }} -->
-            {{ post.publishedAt | diffForHumans }}
         </div>
     </div>
 </template>
 
 <script>
 import srcData from "@/data.json";
-import moment from 'moment';
+import BaseDate from './BaseDate';
 
 export default {
     name: "PostListItem",
+    components: { BaseDate },
 
     props: {
         post: {
@@ -54,16 +54,6 @@ export default {
         /*humanFriendlyDate() {
             return moment.unix(this.post.publishedAt).format('MMMM Do YYYY, h:mm:ss a');
         }*/
-    },
-
-    filters: {
-        humanFriendlyDate(date) {
-            return moment.unix(date).format('MMMM Do YYYY, h:mm:ss a');
-        },
-
-        diffForHumans(date) {
-            return moment.unix(date).fromNow()
-        }
     }
 };
 </script>

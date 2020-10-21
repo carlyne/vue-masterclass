@@ -7,7 +7,10 @@
                     </router-link>
                 </p>
 
-                <p class="text-faded text-xsmall"> By <a href="#">{{ user.name }}</a>, {{ thread.publishedAt }}. </p>
+                <p class="text-faded text-xsmall"> 
+                    By <a href="#">{{ user.name }}</a>,
+                    <BaseDate :timestamp="thread.publishedAt" />
+                </p>
             </div>
 
             <div class="activity">
@@ -29,9 +32,11 @@
 
 <script>
     import srcData from "../data.json";
+    import BaseDate from './BaseDate';
 
     export default {
         name: "ThreadListItem",
+        components: { BaseDate },
 
         props: {
         thread: {
