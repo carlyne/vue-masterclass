@@ -29,7 +29,7 @@
 
 <script>
 import srcData from "@/data.json";
-import BaseDate from './BaseDate';
+
 
 export default {
     name: "PostListItem",

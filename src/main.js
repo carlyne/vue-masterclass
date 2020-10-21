@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import BaseDate from '@/components/BaseDate';
+Vue.component('BaseDate', BaseDate)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
