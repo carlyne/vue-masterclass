@@ -28,8 +28,8 @@
 </template>
 
 <script>
+import BaseDate from "@/components/BaseDate";
 import srcData from "@/data.json";
-
 
 export default {
     name: "PostListItem",

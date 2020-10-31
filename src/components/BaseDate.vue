@@ -8,6 +8,7 @@
 import moment from 'moment';
 
 export default {
+    name: "BaseDate",
     props: {
         timestamp: {
             required: true,
