@@ -18,7 +18,6 @@
 
 <script>
 import ThreadList from "@/components/ThreadList";
-import srcData from "@/data.json";
 
 export default {
 	name: "PageForumThread",
@@ -33,11 +32,11 @@ export default {
 
 	computed: {
 		forum() {
-			return srcData.forums[this.id];
+			return this.$store.state.forums[this.id];
 		},
 
 		threads() {
-			const forumThreads =  Object.values(srcData.threads);
+			const forumThreads =  Object.values(this.$store.state.threads);
 			return forumThreads.filter(thread => thread.forumId === this.id);
 		}
 	}

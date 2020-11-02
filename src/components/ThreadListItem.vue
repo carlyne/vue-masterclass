@@ -31,7 +31,6 @@
 </template>
 
 <script>
-    import srcData from "../data.json";
     import BaseDate from './BaseDate';
 
     export default {
@@ -51,7 +50,7 @@
             },
 
             user() {
-                return srcData.users[this.thread.userId];
+                return this.$store.state.users[this.thread.userId];
             }
         }
     };

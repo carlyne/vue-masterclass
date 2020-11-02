@@ -29,7 +29,6 @@
 
 <script>
 import BaseDate from "@/components/BaseDate";
-import srcData from "@/data.json";
 
 export default {
     name: "PostListItem",
@@ -44,7 +43,7 @@ export default {
 
     computed: {
         user () {
-            return srcData.users[this.post.userId];
+            return this.$store.state.users[this.post.userId];
         },
 
         userPostCount () {

@@ -11,7 +11,6 @@
 </template>
 
 <script>
-import srcData from "@/data.json";
 import ThreadListItem from './ThreadListItem';
 
 export default {

@@ -7,7 +7,6 @@
 
 <script>
 import CategoryListItem from '@/components/CategoryListItem';
-import srcData from '@/data.json';
 
 export default {
   name: "PageCategory",
@@ -22,7 +21,7 @@ export default {
 
     computed: {
         category() {
-            return srcData.categories[this.id];
+            return this.$store.state.categories[this.id];
         }
     }
 };
