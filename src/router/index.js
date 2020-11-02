@@ -4,6 +4,7 @@ import Router from 'vue-router';
 import Home from '@/pages/PageHome';
 import ThreadShow from '@/pages/PageThreadShow';
 import PageForumThread from '@/pages/PageForumThread';
+import PageCategory from '@/pages/PageCategory';
 import NotFound from '@/pages/PageNotFound'
 
 
@@ -15,6 +16,13 @@ export default new Router({
       path: '/',
       name: 'PageHome',
       component: Home
+    },
+
+    {
+      path: '/category/:id',
+      name: 'PageCategory',
+      component: PageCategory,
+      props: true
     },
 
     {
