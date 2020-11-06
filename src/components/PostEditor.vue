@@ -34,8 +34,6 @@ export default {
 
   methods: {
     save() {
-      const postId = 'great post' + Math.random();
-
       const post = {
         text: this.text,
         publishedAt: Math.floor(Date.now() / 1000),
@@ -47,6 +45,7 @@ export default {
       this.text = '';
 
       this.$emit('save', { post });
+      this.$store.dispatch('createPost', post);
     }
   }
 };

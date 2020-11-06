@@ -3,7 +3,7 @@
 import Vue from 'vue';
 import App from './App';
 import router from './router';
-import store from '@/component/store';
+import store from '@/store';
 
 import BaseDate from '@/components/BaseDate';
 Vue.component('BaseDate', BaseDate)
